@@ -1,0 +1,82 @@
+socket = new WebSocket("ws://" + window.location.host + "/switches/");
+
+socket.onopen = function() {
+//    socket.send("hello world");
+}
+// Call onopen directly if socket is already open
+if (socket.readyState == WebSocket.OPEN) socket.onopen();
+
+
+$( function() {
+    $( "#slider-vertical1" ).slider({
+    orientation: "vertical",
+    range: "min",
+    min: 0,
+    max: 100,
+    value: 60,
+    slide: function( event, ui ) {
+        $( "#amount1" ).text( ui.value );
+socket.send(ui.value);
+
+
+      }
+    });
+    $( "#amount1" ).text( $( "#slider-vertical1" ).slider( "value" ) );
+
+    $( "#slider-vertical1" ).position({
+  my: "center",
+  at: "center",
+  of: "#central1"
+});
+
+    });
+
+$( function() {
+    $( "#slider-vertical2" ).slider({
+    orientation: "vertical",
+    range: "min",
+    min: 0,
+    max: 100,
+    value: 60,
+    slide: function( event, ui ) {
+        $( "#amount2" ).text( ui.value );
+      }
+    });
+    $( "#amount2" ).text( $( "#slider-vertical2" ).slider( "value" ) );
+
+    $( "#slider-vertical2" ).position({
+  my: "center",
+  at: "center",
+  of: "#central2"
+});
+
+    });
+
+$( function() {
+    $( "#slider-vertical3" ).slider({
+    orientation: "vertical",
+    range: "min",
+    min: 0,
+    max: 100,
+    value: 60,
+    slide: function( event, ui ) {
+        $( "#amount3" ).text( ui.value );
+      }
+    });
+    $( "#amount3" ).text( $( "#slider-vertical3" ).slider( "value" ) );
+
+    $( "#slider-vertical3" ).position({
+  my: "center",
+  at: "center",
+  of: "#central3"
+});
+
+    });
+
+socket.onmessage = function(e) {
+console.log(e.data);
+    $( "#slider-vertical1" ).slider("value", parseInt(e.data));
+    $( "#amount1" ).text(parseInt(e.data))
+//$("#slider-vertical2").val(parseInt(e.data)).slider("refresh");
+    //alert(e.data);
+}

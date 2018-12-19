@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="shortcut icon" type="image/ico" href="{% static 'icons/favicon.ico' %}"/>
+<!--link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/-->
+
+<head>
+    <title>Flip-IO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <link href="{% static 'graphs/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'graphs/css/bootstrap-theme.css' %}" rel="stylesheet">
+    <link href="{% static 'graphs/css/bootstrap-switch.css' %}" rel="stylesheet">
+    <link href="{% static 'graphs/css/jquery-ui.css' %}" rel="stylesheet">
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
+
+
+    <script src="{% static 'graphs/js/jquery-1.12.4.js' %}"></script>
+    <script src="{% static 'graphs/js/bootstrap.js' %}" ></script>
+    <script src="{% static 'graphs/js/bootstrap-switch.js' %}" ></script>
+    <script src="{% static 'graphs/js/jquery-ui.js' %}"></script>
+
+    <script src="{% static 'graphs/js/jquery.ui.touch-punch.min.js' %}" ></script>
+
+
+
+    <link href="{% static 'graphs/css/stylesheet.css' %}" rel="stylesheet">
+    <script src="{% static 'graphs/js/morris.min.js' %}"></script>
+    <script src="{% static 'graphs/js/Chart.bundle.js' %}"></script>
+
+<script src="{% static 'graphs/js/highcharts.js' %}"></script>
+<script src="{% static 'graphs/js/highcharts-more.js' %}"></script>
+
+<script src="{% static 'graphs/js/solid-gauge.js' %}"></script>
+
+<script src="{% static 'graphs/js/justgage.js' %}"></script>
+<script src="{% static 'graphs/js/raphael-2.1.4.min.js' %}"></script>
+
+
+<canvas id="myCanvas" width="100%" height="46"></canvas>
+
+</head>
+    <body background="{% static 'graphs/images/background.jpg' %}">
+
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="/"><img src="{% static 'icons/flip-io.png' %}" height="22px"></a>
+    </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li><a href="/switches">Switch</a></li>
+      <li><a href="/charts">Monitor</a></li>
+      <li><a href="#">Supervisor</a></li>
+      <li><a href="#">Members</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact Us</a></li>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <div class="btn-group">
+        <a href="/admin" class="btn btn-info navbar-btn">
+          <span class="glyphicon glyphicon-user"></span> Admin Panel
+        </a>
+        </div>
+
+
+
+    </ul>
+  </div>
+
+</nav>
+
+    {% block content %} {% endblock content %}
+
+
+    </body>
+</html>

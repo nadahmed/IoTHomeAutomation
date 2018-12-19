@@ -1,0 +1,21 @@
+{% extends "graphs/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+ <div class="container fixed-height">
+      <div class="row">
+       <div class="col-lg-1"></div>
+         <div id="hello" class="col-lg-10" style="text-align:center;">
+
+                  <img src="{% static 'icons/flip-io.png' %}" height="100px">
+              <h1 style="padding:20px">Welcome to the Internet of Things!</h1>
+
+             <a href="/switches" class="btn btn-success btn-lg" style="padding:20px" role="button">Let's Get Started!</a>
+
+         </div>
+
+       <div class="col-lg-1"></div>
+     </div>
+   </div>
+{% endblock content %}

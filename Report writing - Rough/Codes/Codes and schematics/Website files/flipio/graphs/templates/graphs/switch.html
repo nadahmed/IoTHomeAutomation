@@ -1,0 +1,65 @@
+{% extends "graphs/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<script src="{% static 'graphs/main/switches.js' %}"></script>
+
+ <div class="container">
+
+         <div id="hello" class="fixed-width" style="text-align:center; width:100%">
+             <div class="col-xs-4">
+
+                <h4 style="padding:0px;">Light 1</h4>
+
+                <p id="amount1" style="color:#f6931f; font-weight:bold;"></p>
+
+                 <div id="central1" align="center" style="height:230px;">
+                <div id="slider-vertical1" style="height:200px;"></div>
+             </div>
+
+
+
+                 <input type="checkbox" name="my-checkbox" >
+
+             </div>
+
+             <div class="col-xs-4">
+
+                <h4 style="padding:0px;">Fan</h4>
+
+                <p id="amount2" style="color:#f6931f; font-weight:bold;"></p>
+
+
+                 <div id="central2" align="center" style="height:230px;">
+                <div id="slider-vertical2" style="height:200px;"></div>
+             </div>
+
+
+
+                 <input type="checkbox" name="my-checkbox2">
+
+             </div>
+
+             <div class="col-xs-4">
+
+                <h4 style="padding:0px">Light 2</h4>
+
+                <p id="amount3" style="color:#f6931f; font-weight:bold;"></p>
+                 <div id="central3" align="center" style="height:230px;">
+                <div id="slider-vertical3" style="height:200px;"></div>
+             </div>
+
+
+
+
+                 <input type="checkbox" name="my-checkbox3">
+
+             </div>
+
+         </div>
+
+
+
+   </div>
+
+{% endblock content %}

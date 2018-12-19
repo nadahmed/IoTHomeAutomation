@@ -1,0 +1,93 @@
+ {% extends "graphs/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<script src="{% static 'graphs/main/charts.js' %}"></script>
+
+
+			<div class="container">
+
+            <div class="row">
+            <div class="col-md-6 col-xs-12">
+					<div class="panel panel-primary">
+				    <div class="panel-heading"><b>Power</b></div>
+
+			        <div class="panel-body">
+				        <div id="lineChart2" style="width: 100%; height: 220px;"></div>
+                    </div>
+
+			        </div>
+			</div>
+
+                <div class="col-md-3 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>Power Factor</b></div>
+                    <div class="panel-body">
+						 <div id="container-speed" style="height:220px"></div>
+
+
+					</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>Voltage</b></div>
+                    <div class="panel-body">
+						<div id="container-rpm" style="height: 220px;"></div>
+
+					</div>
+					</div>
+				</div>
+
+
+			</div>
+
+            <div class="row">
+
+			<div class="col-md-3 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>Current</b></div>
+                    <div class="panel-body">
+                    <div id="g5" style="height: 220px;" class="300x300px" align="center"></div>
+
+					</div>
+					</div>
+			</div>
+                <div class="col-md-3 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>Instantaneous Current</b></div>
+                    <div class="panel-body">
+
+						<div id="g6" style="height: 220px;" class="300x300px" align="center"></div>
+
+
+					</div>
+					</div>
+			</div>
+
+				<div class="col-md-6 col-xs-12">
+					<div class="panel panel-primary">
+				    <div class="panel-heading"><b>Temperature</b></div>
+
+			        <div class="panel-body">
+				        <div id="lineChart" style="height: 220px;"></div>
+                    </div>
+
+			        </div>
+			</div>
+
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+{% endblock content %}

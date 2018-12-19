@@ -1,0 +1,108 @@
+ {% extends "graphs/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<script src="{% static 'graphs/main/charts.js' %}"></script>
+
+
+			<div class="container">
+
+            <div class="row">
+
+				<div class="col-md-3 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>Apparent Power</b></div>
+                    <div class="panel-body">
+						 <div id="container-apparent" style="height:220px"></div>
+
+
+					</div>
+					</div>
+				</div>
+            <!--div class="col-md-4 col-xs-12">
+					<div class="panel panel-primary">
+				    <div class="panel-heading"><b>Power</b></div>
+
+			        <div class="panel-body">
+				        <div id="lineChart2" style="width: 100%; height: 220px;"></div>
+                    </div>
+
+			        </div>
+			</-div-->
+
+                <div class="col-md-3 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>True Power</b></div>
+                    <div class="panel-body">
+						 <div id="container-real" style="height:220px"></div>
+
+
+					</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>Power Factor</b></div>
+                    <div class="panel-body">
+						<div id="container-pf" style="height: 220px;"></div>
+
+					</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-3 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>Voltage</b></div>
+                    <div class="panel-body">
+						<div id="container-volt" style="height: 220px;"></div>
+
+					</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>Current</b></div>
+                    <div class="panel-body">
+						<div id="container-current" style="height: 220px;"></div>
+
+					</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>Frequency</b></div>
+                    <div class="panel-body">
+						<div id="container-freq" style="height: 220px;"></div>
+
+					</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-xs-12">
+                    <div class="panel panel-primary">
+						<div class="panel-heading"><b>Watt-Hour</b></div>
+                    <div class="panel-body">
+						<div id="lineChart" style="min-width: 310px; height: 220px; margin: 0 auto"></div>
+
+					</div>
+					</div>
+				</div!>
+
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+{% endblock content %}
